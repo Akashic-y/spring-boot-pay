@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 /**
- * 支付主控 
+ * 支付主控(启动的时候一定要把main方法的注释去掉，配置好支付宝、微信以及银联相关参数)
  * 创建者 科帮网
  * 创建时间 2017年7月27日
  * 启动   java -jar spring-boot-pay.jar --server.port=8886 
