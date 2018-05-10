@@ -105,6 +105,8 @@ public class AliPayController {
 		boolean signVerified = false;
 		try {
 			signVerified = AlipaySignature.rsaCheckV1(params, Configs.getAlipayPublicKey(), "UTF-8");
+			//各位同学这里可能需要注意一下,2018/01/26 以后新建应用只支持RSA2签名方式，目前已使用RSA签名方式的应用仍然可以正常调用接口，注意下自己生成密钥的签名算法
+			//signVerified = AlipaySignature.rsaCheckV1(params, Configs.getAlipayPublicKey(), "UTF-8","RSA2");
 		} catch (AlipayApiException e) {
 			e.printStackTrace();
 			message =  "failed";
