@@ -148,6 +148,7 @@ CERT_PATH = apiclient_cert.p12
 - 微信或者支付宝下单调用网关失败，请检查网络 ping api.mch.weixin.qq.com -c 100 或者 ping openapi.alipay.com/gateway.do -c 100
 - 支付宝中的初始化配置Configs 不要随便变更，支付相关JAR调用的是Configs中的配置
 - 由于项目配置了SSL，访问地址： https://ip:port/springboot_pay/ 见：[SpringBoot开发案例之集成SSL证书](https://blog.52itstyle.com/archives/1403/)
+- 2018/01/26 以后新建应用只支持RSA2签名方式，目前已使用RSA签名方式的应用仍然可以正常调用接口，注意下自己生成密钥的签名算法，见AliPayController类。
 
 ## 功能日志
 - 支付宝生成支付二维码Demo已经测试完成
