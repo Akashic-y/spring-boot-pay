@@ -102,6 +102,10 @@ heartbeat_duration = 900
 
 ```
 
+支付宝的SDK-alipay-sdk-java这里下载： https://docs.open.alipay.com/54/103419/
+
+大家比较好奇的alipay-trade-sdk从这里下载的TradePayDemo项目中的额lib下面，不过是16年的，目前来说还是可以使用的： https://docs.open.alipay.com/54/104506/
+
 ## 微信
 
 - H5支付：https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=15_1
