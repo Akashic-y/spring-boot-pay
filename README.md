@@ -139,6 +139,7 @@ CERT_PATH = apiclient_cert.p12
 - 开放平台：https://open.unionpay.com/ajweb/index
 - 商家中心：https://merchant.unionpay.com/join/
 - 测试账号：https://blog.52itstyle.com/archives/326/
+- 证书问题(QA)：https://open.unionpay.com/ajweb/help/faq/list?id=174&level=0&from=0
 
 ## 注意事项
 - 除银联支付可以测试以外，支付宝和微信支付测试均需要企业认证，个人无法完成测试
