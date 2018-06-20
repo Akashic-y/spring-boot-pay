@@ -178,6 +178,8 @@ CERT_PATH = apiclient_cert.p12
 
 ## 推荐阅读
 
+[开发微信支付之前要做的那些事儿](https://blog.52itstyle.com/archives/3053/)
+
 [内网穿透神器：Ngrok在支付中的正确使用姿势](https://blog.52itstyle.com/archives/2972/)
 
 [那些年支付宝微信银联支付遇到的坑](https://blog.52itstyle.com/archives/1364/)
@@ -206,11 +208,3 @@ CERT_PATH = apiclient_cert.p12
 
 欢迎关注： https://blog.52itstyle.com
 
-## 赠书活动
-![输入图片说明](https://gitee.com/uploads/images/2018/0610/214519_08f0fb03_87650.png "QQ图片20180610203835.png")
-
-#### 奖品介绍：
-
-- 《Effective java中文版》
-- 《阿里巴巴Java开发手册》
-- 《亿级流量网站架构核心技术》
