@@ -33,7 +33,7 @@ JDK1.7、Maven、Eclipse、SpringBoot1.5.2、spring-boot-starter-thymeleaf、Dub
 同时由于接口扫描注解使用的是Dubbo的  com.alibaba.dubbo.config.annotation.Service; 请自行替换成spring的 org.springframework.stereotype.Service;
 - 最后想测试相关支付效果，请自行配置支付宝、微信以及银联相关账号以及证书
 
-- 启动并访问项目：http://localhost:8080/springboot_pay/index
+- 启动并访问项目：http://localhost:8080/springboot_pay
 
 ## 友情提示
 由于工作原因，项目正在完善中（仅供参考），随时更新日志，有疑问请留言或者加群
