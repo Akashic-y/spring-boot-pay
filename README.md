@@ -178,6 +178,9 @@ CERT_PATH = apiclient_cert.p12
 
 ## 推荐阅读
 
+
+[开发银联支付之前要做的那些事儿](https://blog.52itstyle.com/archives/3060/)
+
 [开发微信支付之前要做的那些事儿](https://blog.52itstyle.com/archives/3053/)
 
 [内网穿透神器：Ngrok在支付中的正确使用姿势](https://blog.52itstyle.com/archives/2972/)
