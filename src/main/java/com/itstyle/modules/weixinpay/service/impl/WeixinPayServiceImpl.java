@@ -104,7 +104,11 @@ public class WeixinPayServiceImpl implements IWeixinPayService {
     	qrCode.append("&time_stamp="+packageParams.get("time_stamp"));
     	qrCode.append("&sign="+sign);
     	String imgPath= Constants.QRCODE_PATH+Constants.SF_FILE_SEPARATOR+product.getProductId()+".png";
-    	//生成二维码
+    	/**
+    	 * 生成二维码
+    	 * 1、这里如果是一个单独的服务的话，建议直接返回qrCode即可，调用方自己生成二维码
+    	 * 2、 如果真要生成，生成到系统绝对路径
+    	 */
         ZxingUtils.getQRCodeImge(qrCode.toString(), 256, imgPath);
 	}
 	@SuppressWarnings("rawtypes")
