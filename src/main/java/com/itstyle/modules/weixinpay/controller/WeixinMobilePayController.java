@@ -56,7 +56,8 @@ public class WeixinMobilePayController {
 	@ApiOperation(value="公众号H5支付主页")
 	@RequestMapping(value="payPage",method=RequestMethod.GET)
 	public String pay(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		return "weixin/payPage";
+		//这里因为无法测试、模板下是个JSP页面、无法正常运行，请自行修改逻辑
+		return "weixinpay/payPage";
 	}
 	@ApiOperation(value="纯H5支付(不建议在APP端使用)")
 	@RequestMapping(value="h5pay",method=RequestMethod.POST)
