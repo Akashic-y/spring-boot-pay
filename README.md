@@ -33,6 +33,8 @@ JDK1.7、Maven、Eclipse、SpringBoot1.5.2、spring-boot-starter-thymeleaf、Dub
 同时由于接口扫描注解使用的是Dubbo的  com.alibaba.dubbo.config.annotation.Service; 请自行替换成spring的 org.springframework.stereotype.Service;
 - 最后想测试相关支付效果，请自行配置支付宝、微信以及银联相关账号以及证书
 
+- 启动并访问项目：http://localhost:8080/springboot_pay
+
 ## 友情提示
 由于工作原因，项目正在完善中（仅供参考），随时更新日志，有疑问请留言或者加群
 
@@ -100,6 +102,10 @@ heartbeat_duration = 900
 
 ```
 
+支付宝的SDK-alipay-sdk-java这里下载： https://docs.open.alipay.com/54/103419/
+
+大家比较好奇的alipay-trade-sdk从这里下载的TradePayDemo项目中的额lib下面，不过是16年的，目前来说还是可以使用的： https://docs.open.alipay.com/54/104506/
+
 ## 微信
 
 - H5支付：https://pay.weixin.qq.com/wiki/doc/api/H5.php?chapter=15_1
@@ -133,6 +139,7 @@ CERT_PATH = apiclient_cert.p12
 - 开放平台：https://open.unionpay.com/ajweb/index
 - 商家中心：https://merchant.unionpay.com/join/
 - 测试账号：https://blog.52itstyle.com/archives/326/
+- 证书问题(QA)：https://open.unionpay.com/ajweb/help/faq/list?id=174&level=0&from=0
 
 ## 注意事项
 - 除银联支付可以测试以外，支付宝和微信支付测试均需要企业认证，个人无法完成测试
@@ -148,6 +155,7 @@ CERT_PATH = apiclient_cert.p12
 - 微信或者支付宝下单调用网关失败，请检查网络 ping api.mch.weixin.qq.com -c 100 或者 ping openapi.alipay.com/gateway.do -c 100
 - 支付宝中的初始化配置Configs 不要随便变更，支付相关JAR调用的是Configs中的配置
 - 由于项目配置了SSL，访问地址： https://ip:port/springboot_pay/ 见：[SpringBoot开发案例之集成SSL证书](https://blog.52itstyle.com/archives/1403/)
+- 2018/01/26 以后新建应用只支持RSA2签名方式，目前已使用RSA签名方式的应用仍然可以正常调用接口，注意下自己生成密钥的签名算法，见AliPayController类。
 
 ## 功能日志
 - 支付宝生成支付二维码Demo已经测试完成
@@ -169,6 +177,13 @@ CERT_PATH = apiclient_cert.p12
 
 
 ## 推荐阅读
+
+
+[开发银联支付之前要做的那些事儿](https://blog.52itstyle.com/archives/3060/)
+
+[开发微信支付之前要做的那些事儿](https://blog.52itstyle.com/archives/3053/)
+
+[内网穿透神器：Ngrok在支付中的正确使用姿势](https://blog.52itstyle.com/archives/2972/)
 
 [那些年支付宝微信银联支付遇到的坑](https://blog.52itstyle.com/archives/1364/)
 
@@ -195,3 +210,4 @@ CERT_PATH = apiclient_cert.p12
 作者： 小柒2012
 
 欢迎关注： https://blog.52itstyle.com
+
