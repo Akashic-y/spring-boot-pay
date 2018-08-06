@@ -25,6 +25,7 @@ import com.alipay.demo.trade.config.Configs;
 import com.itstyle.common.constants.Constants;
 import com.itstyle.common.model.Product;
 import com.itstyle.modules.alipay.service.IAliPayService;
+import com.itstyle.modules.alipay.util.AliPayConfig;
 /**
  * 支付宝支付
  * 创建者 科帮网
@@ -104,9 +105,11 @@ public class AliPayController {
 		//验证签名 校验签名
 		boolean signVerified = false;
 		try {
-			signVerified = AlipaySignature.rsaCheckV1(params, Configs.getAlipayPublicKey(), "UTF-8");
+			signVerified = AlipaySignature.rsaCheckV1(params, Configs.getAlipayPublicKey(), AliPayConfig.CHARSET, AliPayConfig.SIGN_TYPE);
 			//各位同学这里可能需要注意一下,2018/01/26 以后新建应用只支持RSA2签名方式，目前已使用RSA签名方式的应用仍然可以正常调用接口，注意下自己生成密钥的签名算法
 			//signVerified = AlipaySignature.rsaCheckV1(params, Configs.getAlipayPublicKey(), "UTF-8","RSA2");
+			//有些同学通过 可能使用了这个API导致验签失败，特此说明一下
+			//signVerified = AlipaySignature.rsaCheckV2(params, Configs.getAlipayPublicKey(), "UTF-8");//正式环境
 		} catch (AlipayApiException e) {
 			e.printStackTrace();
 			message =  "failed";

@@ -15,6 +15,10 @@ public final class AliPayConfig {
      * 私有的默认构造子，保证外界无法直接实例化
      */
     private AliPayConfig(){};
+    /**
+     * 签名方式
+     */
+ 	public static String SIGN_TYPE = "RSA2";
 	 /**
      * 参数类型
      */
@@ -22,7 +26,7 @@ public final class AliPayConfig {
     /**
      * 编码
      */
-    public static String CHARSET = "UTF-8";
+    public static String CHARSET = "utf-8";
     /**
      * 类级的内部类，也就是静态的成员式内部类，该内部类的实例与外部类的实例
      * 没有绑定关系，而且只有被调用到才会装载，从而实现了延迟加载
