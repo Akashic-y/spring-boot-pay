@@ -7,7 +7,9 @@ http://doc.52itstyle.com/
 
 ## 欢迎关注
 
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0802/192116_4752d44b_87650.jpeg "1801066129 (1).jpg")
+一个有温度的微信公众号，期待与你共同进步，分享美文，分享各种Java学习资源
+
+![输入图片说明](https://images.gitee.com/uploads/images/2018/0809/181043_76e4d5b8_87650.png "1234.png")
 
 
 以下所有支付Demo，测试通过，真实有效。
