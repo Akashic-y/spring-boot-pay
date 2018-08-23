@@ -267,6 +267,11 @@ public class AliPayServiceImpl implements IAliPayService {
         bizContent.put("seller_id", Configs.getPid());//实际收款账号，一般填写商户PID即可
         bizContent.put("product_code", "FAST_INSTANT_TRADE_PAY");//电脑网站支付
 		bizContent.put("body", "两个苹果五毛钱");
+		/**
+		 * 这里有三种模式可供选择
+		 * 如果在系统内支付，并且是弹出层支付，建议选择模式二、其他模式会跳出当前iframe(亲测有效)
+		 */
+		bizContent.put("qr_pay_mode", "2");
 		String biz = bizContent.toString().replaceAll("\"", "'");
         alipayRequest.setBizContent(biz);
         logger.info("业务参数:"+alipayRequest.getBizContent());
