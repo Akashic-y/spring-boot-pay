@@ -32,6 +32,11 @@ public class WeixinPayServiceImpl implements IWeixinPayService {
 	@Value("${server.context.url}")
 	private String server_url;
 	
+	/**
+	 * 微信支付要求商户订单号保持唯一性（建议根据当前系统时间加随机序列来生成订单号）。
+	 * 重新发起一笔支付要使用原订单号，避免重复支付；已支付过或已调用关单、撤销的订单号不能重新发起支付。
+	 * 注意：支付金额和商品描述必须一样，下单后金额或者描述如果有改变也会出现订单号重复。
+	 */
 	@SuppressWarnings("rawtypes")
 	@Override
 	public String weixinPay2(Product product) {
