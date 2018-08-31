@@ -304,4 +304,49 @@ public class WeixinPayServiceImpl implements IWeixinPayService {
 		}
 		return mweb_url;
 	}
+	/**
+	 * SUCCESS—支付成功
+	 * REFUND—转入退款
+	 * NOTPAY—未支付
+	 * CLOSED—已关闭
+	 * REVOKED—已撤销（刷卡支付）
+	 * USERPAYING--用户支付中
+	 * PAYERROR--支付失败(其他原因，如银行返回失败)
+	 * 支付状态机请见下单API页面
+	 * 
+	 */
+	@SuppressWarnings("rawtypes")
+	@Override
+	public void orderquery(Product product) {
+		try {
+			// 账号信息
+			String key = ConfigUtil.API_KEY; // key
+			SortedMap<Object, Object> packageParams = new TreeMap<Object, Object>();
+			ConfigUtil.commonParams(packageParams);
+			packageParams.put("out_trade_no", product.getOutTradeNo());// 商户订单号
+			String sign = PayCommonUtil.createSign("UTF-8", packageParams, key);
+			packageParams.put("sign", sign);// 签名
+			String requestXML = PayCommonUtil.getRequestXml(packageParams);
+			String resXml = HttpUtil.postData(ConfigUtil.CHECK_ORDER_URL, requestXML);
+			Map map = XMLUtil.doXMLParse(resXml);
+			String returnCode = (String) map.get("return_code");
+			logger.info(returnCode);
+			if("SUCCESS".equals(returnCode)){
+				String resultCode = (String) map.get("result_code");
+				if("SUCCESS".equals(resultCode)){
+					String tradeState = (String) map.get("trade_state");
+					logger.info(tradeState);
+				}else{
+					String errCodeDes = (String) map.get("err_code_des");
+					logger.info(errCodeDes);
+				}
+			}else{
+				String returnMsg = (String) map.get("return_msg");
+				logger.info(returnMsg);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
 }

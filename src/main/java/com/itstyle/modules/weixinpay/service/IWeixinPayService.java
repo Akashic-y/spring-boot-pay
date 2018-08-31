@@ -79,4 +79,10 @@ public interface IWeixinPayService {
 	 *
 	 */
 	String weixinPayH5(Product product);
+	
+	/**
+	 * 查询订单
+	 * @param product
+	 */
+	void orderquery(Product product);
 }
