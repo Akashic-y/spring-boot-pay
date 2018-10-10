@@ -177,6 +177,15 @@ CERT_PATH = apiclient_cert.p12
 - 集成HTTPS证书安全服务 
 - 集成微信H5(WAP)支付
 
+## 升级说明
+
+##### 2018-10-10 更新说明：
+
+- 原当当 Dubbox 2.8.4 替换为 Dubbo 2.6.2
+- 原spring-context-dubbo.xml 配置 替换为 dubbo-spring-boot-starter 2.0.0
+- 原 zkclient 0.6 替换为 curator-recipes 4.0.1
+- 原 zookeeper 3.4.6 升级为 zookeeper 3.5.3
+
 
 ## 推荐阅读
 
