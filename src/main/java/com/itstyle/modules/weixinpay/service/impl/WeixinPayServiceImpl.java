@@ -9,6 +9,7 @@ import net.sf.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import weixin.popular.api.SnsAPI;
 
@@ -24,6 +25,7 @@ import com.itstyle.modules.weixinpay.util.HttpUtil;
 import com.itstyle.modules.weixinpay.util.PayCommonUtil;
 import com.itstyle.modules.weixinpay.util.XMLUtil;
 @Service
+@Component
 public class WeixinPayServiceImpl implements IWeixinPayService {
 	private static final Logger logger = LoggerFactory.getLogger(WeixinPayServiceImpl.class);
 	

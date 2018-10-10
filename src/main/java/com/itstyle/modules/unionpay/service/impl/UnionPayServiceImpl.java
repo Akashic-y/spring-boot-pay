@@ -6,6 +6,7 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.itstyle.common.constants.Constants;
@@ -17,6 +18,7 @@ import com.itstyle.modules.unionpay.util.AcpService;
 import com.itstyle.modules.unionpay.util.SDKConfig;
 import com.itstyle.modules.unionpay.util.UnionConfig;
 @Service
+@Component
 public class UnionPayServiceImpl implements IUnionPayService{
 	private static final Logger logger = LoggerFactory.getLogger(UnionPayServiceImpl.class);
 	
