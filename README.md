@@ -218,7 +218,8 @@ CERT_PATH = apiclient_cert.p12
 
 [SpringBoot开发案例之整合Swagger篇](https://blog.52itstyle.com/archives/1473/)
 
+[SpringBoot开发案例之整合Dubbo分布式服务](https://blog.52itstyle.com/archives/3411/)
+
 作者： 小柒2012
 
 欢迎关注： https://blog.52itstyle.com
-
