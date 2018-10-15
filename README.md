@@ -138,7 +138,7 @@ CERT_PATH = apiclient_cert.p12
 ```
 
 ## 银联
-- 开放平台：https://open.unionpay.com/ajweb/index
+- 开放平台：https://open.unionpay.com/
 - 商家中心：https://merchant.unionpay.com/join/
 - 测试账号：https://blog.52itstyle.com/archives/326/
 - 证书问题(QA)：https://open.unionpay.com/ajweb/help/faq/list?id=174&level=0&from=0
