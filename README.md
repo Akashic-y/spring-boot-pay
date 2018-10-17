@@ -40,10 +40,8 @@ JDK1.7、Maven、Eclipse、SpringBoot1.5.2、spring-boot-starter-thymeleaf、Dub
 ## 友情提示
 由于工作原因，项目正在完善中（仅供参考），随时更新日志，有疑问请留言或者加群
 
-- JAVA爱好者④:<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=eba7a5d6f672c67cf942e08486e5102f0a0a6268206f873fef48a9d74f248de8"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="JAVA爱好者" title="JAVA爱好者"></a>
-- JAVA爱好者①:<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=f316b04ba30f31190c0d8120b5c54acf245299726b4450fb6fc64753dd546bf8"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="JAVA爱好者①" title="JAVA爱好者①"></a>(满)
-- JAVA爱好者②:<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=b2fc105d5cf11231cd863dc829b82f50454b693ad20b892a362de5adbcc9b0b3"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="JAVA爱好者②" title="JAVA爱好者②"></a>(满)
-- JAVA爱好者③:<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=cbee3cb06364401522ea90776a1bd83cdbbed20622b93a37158d41460537db96"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="JAVA爱好者③" title="JAVA爱好者③"></a>(满)
+- JAVA爱好者:<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=eba7a5d6f672c67cf942e08486e5102f0a0a6268206f873fef48a9d74f248de8"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="JAVA爱好者" title="JAVA爱好者"></a>
+
 
 ## 支付文档
 
@@ -138,7 +136,7 @@ CERT_PATH = apiclient_cert.p12
 ```
 
 ## 银联
-- 开放平台：https://open.unionpay.com/ajweb/index
+- 开放平台：https://open.unionpay.com/
 - 商家中心：https://merchant.unionpay.com/join/
 - 测试账号：https://blog.52itstyle.com/archives/326/
 - 证书问题(QA)：https://open.unionpay.com/ajweb/help/faq/list?id=174&level=0&from=0
@@ -177,6 +175,15 @@ CERT_PATH = apiclient_cert.p12
 - 集成HTTPS证书安全服务 
 - 集成微信H5(WAP)支付
 
+## 升级说明
+
+##### 2018-10-10 更新说明：
+
+- 原当当 Dubbox 2.8.4 替换为 Dubbo 2.6.2
+- 原spring-context-dubbo.xml 配置 替换为 dubbo-spring-boot-starter 2.0.0
+- 原 zkclient 0.6 替换为 curator-recipes 4.0.1
+- 原 zookeeper 3.4.6 升级为 zookeeper 3.5.3
+
 
 ## 推荐阅读
 
@@ -209,7 +216,8 @@ CERT_PATH = apiclient_cert.p12
 
 [SpringBoot开发案例之整合Swagger篇](https://blog.52itstyle.com/archives/1473/)
 
+[SpringBoot开发案例之整合Dubbo分布式服务](https://blog.52itstyle.com/archives/3411/)
+
 作者： 小柒2012
 
 欢迎关注： https://blog.52itstyle.com
-
