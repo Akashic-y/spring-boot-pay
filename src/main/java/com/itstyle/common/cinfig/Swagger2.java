@@ -1,4 +1,4 @@
-package com.itstyle;
+package com.itstyle.common.cinfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
