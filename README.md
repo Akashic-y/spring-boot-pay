@@ -188,6 +188,13 @@ CERT_PATH = apiclient_cert.p12
 - 原 zkclient 0.6 替换为 curator-recipes 4.0.1
 - 原 zookeeper 3.4.6 升级为 zookeeper 3.5.3
 
+##### 2018-10-17 更新说明：
+
+```
+{"alipay_trade_precreate_response":{"code":"40003","msg":"Insufficient Conditions","sub_code":"isv.missing-signature-config","sub_msg":"应用未配置对应签名算法的公钥或者证书"}}
+```
+
+二维码支付报错：应用未配置对应签名算法的公钥或者证书。记得17年申请的时候貌似不需要门店，如果是18年申请二维码支付需要门店并申请签约才可以使用。
 
 ## 推荐阅读
 
