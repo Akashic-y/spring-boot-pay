@@ -33,6 +33,10 @@ JDK1.7、Maven、Eclipse、SpringBoot1.5.2、spring-boot-starter-thymeleaf、Dub
 - 配置Dubbo需要安装注册中心zookeeper: http://www.52itstyle.com/thread-19791-1-1.html
 - 如果不想使用Dubbo和安装zookeeper，又想启动看下效果，请注释掉 Application 类中的@ImportResource({"classpath:spring-context-dubbo.xml"})，
 同时由于接口扫描注解使用的是Dubbo的  com.alibaba.dubbo.config.annotation.Service; 请自行替换成spring的 org.springframework.stereotype.Service;
+
+- 2018-10-10 原spring-context-dubbo.xml 配置 替换为 dubbo-spring-boot-starter 2.0.0,接上如果不用注释掉@EnableDubboConfiguration即可
+- 基础配置初始化类：com.itstyle.common.cinfig.InitPay
+
 - 最后想测试相关支付效果，请自行配置支付宝、微信以及银联相关账号以及证书
 
 - 启动并访问项目：http://localhost:8080/springboot_pay
