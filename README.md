@@ -80,6 +80,8 @@ JDK1.7、Maven、Eclipse、SpringBoot1.5.2、spring-boot-starter-thymeleaf、Dub
 - 手机支付：https://docs.open.alipay.com/203
 - APP支付 : https://docs.open.alipay.com/54/106370/
 - 沙箱环境：https://docs.open.alipay.com/200/105311/
+- 支付宝公钥参数：https://openclub.alipay.com/read.php?tid=2190&fid=69
+- RSA(SHA1)升级为RSA(SHA256)：https://opensupport.alipay.com/support/knowledge/20069/201602242782
 - 参数zfbinfo.properties
 
 ```
