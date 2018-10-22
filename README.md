@@ -71,6 +71,10 @@ JDK1.7、Maven、Eclipse、SpringBoot1.5.2、spring-boot-starter-thymeleaf、Dub
 
 ## 支付宝
 
+签约功能列表：
+
+![输入图片说明](https://images.gitee.com/uploads/images/2018/1022/174516_1f8bc13b_87650.png "二维码支付.png")
+
 - 电脑支付：https://docs.open.alipay.com/270
 - 扫码支付：https://docs.open.alipay.com/194
 - 手机支付：https://docs.open.alipay.com/203
