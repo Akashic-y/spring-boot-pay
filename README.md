@@ -71,11 +71,17 @@ JDK1.7、Maven、Eclipse、SpringBoot1.5.2、spring-boot-starter-thymeleaf、Dub
 
 ## 支付宝
 
+签约功能列表：
+
+![输入图片说明](https://images.gitee.com/uploads/images/2018/1022/174516_1f8bc13b_87650.png "二维码支付.png")
+
 - 电脑支付：https://docs.open.alipay.com/270
 - 扫码支付：https://docs.open.alipay.com/194
 - 手机支付：https://docs.open.alipay.com/203
 - APP支付 : https://docs.open.alipay.com/54/106370/
 - 沙箱环境：https://docs.open.alipay.com/200/105311/
+- 支付宝公钥参数：https://openclub.alipay.com/read.php?tid=2190&fid=69
+- RSA(SHA1)升级为RSA(SHA256)：https://opensupport.alipay.com/support/knowledge/20069/201602242782
 - 参数zfbinfo.properties
 
 ```
