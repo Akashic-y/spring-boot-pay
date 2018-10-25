@@ -187,14 +187,14 @@ CERT_PATH = apiclient_cert.p12
 
 ## 升级说明
 
-##### 2018-10-10 更新说明：
+#### 2018-10-10 更新说明：
 
 - 原当当 Dubbox 2.8.4 替换为 Dubbo 2.6.2
 - 原spring-context-dubbo.xml 配置 替换为 dubbo-spring-boot-starter 2.0.0
 - 原 zkclient 0.6 替换为 curator-recipes 4.0.1
 - 原 zookeeper 3.4.6 升级为 zookeeper 3.5.3
 
-##### 2018-10-17 更新说明：
+#### 2018-10-17 更新说明：
 
 ```
 {"alipay_trade_precreate_response":{"code":"40003","msg":"Insufficient Conditions","sub_code":"isv.missing-signature-config","sub_msg":"应用未配置对应签名算法的公钥或者证书"}}
@@ -202,7 +202,7 @@ CERT_PATH = apiclient_cert.p12
 
 二维码支付报错：应用未配置对应签名算法的公钥或者证书。记得17年申请的时候貌似不需要门店，如果是18年申请二维码支付需要门店并申请签约才可以使用。
 
-##### 2018-10-24 更新说明：
+#### 2018-10-24 更新说明：
 
 - [支付宝支付密钥RSA1升级到RSA2](http://https://blog.52itstyle.com/archives/3453/)
 
