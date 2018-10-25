@@ -204,9 +204,9 @@ CERT_PATH = apiclient_cert.p12
 
 ##### 2018-10-24 更新说明：
 
-[支付宝支付密钥RSA1升级到RSA2](http://https://blog.52itstyle.com/archives/3453/)
+- [支付宝支付密钥RSA1升级到RSA2](http://https://blog.52itstyle.com/archives/3453/)
 
-微信支付SDK漏洞xxe漏洞修复。
+- 微信支付SDK漏洞xxe漏洞修复。
 
 ## 推荐阅读
 
