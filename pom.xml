@@ -43,6 +43,7 @@
 		    <artifactId>alipay-trade-sdk</artifactId>
 		    <version>1.0.0</version>
 		</dependency>
+		<!-- 官方SDK  https://mvnrepository.com/artifact/com.alipay.sdk/alipay-sdk-java -->
 		<dependency>
 		    <groupId>com.acts</groupId>
 		    <artifactId>alipay-sdk-java</artifactId>
