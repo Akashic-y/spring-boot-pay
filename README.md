@@ -208,6 +208,36 @@ CERT_PATH = apiclient_cert.p12
 
 - 微信支付SDK漏洞xxe漏洞修复。
 
+#### 2018-11-19 更新说明：
+
+- [升级阿里官方SDk](https://mvnrepository.com/artifact/com.alipay.sdk/alipay-sdk-java)
+
+- 支付密钥sign_type升级为RSA2注意事项：
+
+1）当面付(扫码支付)
+
+pom.xml中下载最新的alipay-trade-sdk，并在配置zfbinfo.properties参数中增加以下参数：
+
+```
+# 签名类型: RSA->SHA1withRsa,RSA2->SHA256withRsa
+sign_type = RSA2
+```
+
+2）电脑支付或者手机支付
+
+需要在创建AlipayClient传入RSA2即可：
+
+```
+AlipayClient alipayClient = new DefaultAlipayClient(
+                                               Configs.getOpenApiDomain(), Configs.getAppid(),
+                                               Configs.getPrivateKey(), "json", "UTF-8",
+                                               Configs.getAlipayPublicKey(),"RSA2");
+```
+
+
+
+
+
 ## 推荐阅读
 
 
