@@ -65,10 +65,6 @@ JDK1.7、Maven、Eclipse、SpringBoot1.5.2、spring-boot-starter-thymeleaf、Dub
 
 ![模拟支付](https://git.oschina.net/uploads/images/2017/0802/191125_6958b9b3_87650.png "2.png")
 
-![扫码模式一](https://git.oschina.net/uploads/images/2017/0803/184824_420ca96d_87650.png "123.png")
-
-
-
 ## 支付宝
 
 签约功能列表：
@@ -187,20 +183,56 @@ CERT_PATH = apiclient_cert.p12
 
 ## 升级说明
 
-##### 2018-10-10 更新说明：
+#### 2018-10-10 更新说明：
 
 - 原当当 Dubbox 2.8.4 替换为 Dubbo 2.6.2
 - 原spring-context-dubbo.xml 配置 替换为 dubbo-spring-boot-starter 2.0.0
 - 原 zkclient 0.6 替换为 curator-recipes 4.0.1
 - 原 zookeeper 3.4.6 升级为 zookeeper 3.5.3
 
-##### 2018-10-17 更新说明：
+#### 2018-10-17 更新说明：
 
 ```
 {"alipay_trade_precreate_response":{"code":"40003","msg":"Insufficient Conditions","sub_code":"isv.missing-signature-config","sub_msg":"应用未配置对应签名算法的公钥或者证书"}}
 ```
 
 二维码支付报错：应用未配置对应签名算法的公钥或者证书。记得17年申请的时候貌似不需要门店，如果是18年申请二维码支付需要门店并申请签约才可以使用。
+
+#### 2018-10-24 更新说明：
+
+- [支付宝支付密钥RSA1升级到RSA2](http://https://blog.52itstyle.com/archives/3453/)
+
+- 微信支付SDK漏洞xxe漏洞修复。
+
+#### 2018-11-19 更新说明：
+
+- [升级阿里官方SDk](https://mvnrepository.com/artifact/com.alipay.sdk/alipay-sdk-java)
+
+- 支付密钥sign_type升级为RSA2注意事项：
+
+1）当面付(扫码支付)
+
+pom.xml中下载最新的alipay-trade-sdk，并在配置zfbinfo.properties参数中增加以下参数：
+
+```
+# 签名类型: RSA->SHA1withRsa,RSA2->SHA256withRsa
+sign_type = RSA2
+```
+
+2）电脑支付或者手机支付
+
+需要在创建AlipayClient传入RSA2即可：
+
+```
+AlipayClient alipayClient = new DefaultAlipayClient(
+                                               Configs.getOpenApiDomain(), Configs.getAppid(),
+                                               Configs.getPrivateKey(), "json", "UTF-8",
+                                               Configs.getAlipayPublicKey(),"RSA2");
+```
+
+
+
+
 
 ## 推荐阅读
 
