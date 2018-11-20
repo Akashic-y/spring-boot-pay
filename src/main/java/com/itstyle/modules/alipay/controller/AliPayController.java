@@ -185,6 +185,7 @@ public class AliPayController {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+			//处理异常信息
 		}
 		//支付成功、跳转到成功页面
 		return "success.html";
