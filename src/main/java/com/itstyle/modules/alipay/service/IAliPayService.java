@@ -1,4 +1,6 @@
 package com.itstyle.modules.alipay.service;
+import java.util.Map;
+
 import com.itstyle.common.model.Product;
 /**
  * 扫码支付以及手机H5支付
@@ -94,4 +96,17 @@ public interface IAliPayService {
 	 *
 	 */
 	String appPay(Product product);
+	
+	/**
+	 * 验证签名1
+	 * @param params
+	 * @return
+	 */
+	boolean rsaCheckV1(Map<String,String> params);
+	/**
+	 * 验证签名2
+	 * @param params
+	 * @return
+	 */
+	boolean rsaCheckV2(Map<String,String> params);
 }

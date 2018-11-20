@@ -1,6 +1,7 @@
 package com.itstyle.modules.alipay.service.impl;
 
 import java.io.File;
+import java.util.Map;
 
 import net.sf.json.JSONObject;
 
@@ -15,6 +16,7 @@ import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;
 import com.alipay.api.AlipayResponse;
 import com.alipay.api.domain.AlipayTradeAppPayModel;
+import com.alipay.api.internal.util.AlipaySignature;
 import com.alipay.api.request.AlipayDataDataserviceBillDownloadurlQueryRequest;
 import com.alipay.api.request.AlipayTradeAppPayRequest;
 import com.alipay.api.request.AlipayTradeCloseRequest;
@@ -42,7 +44,7 @@ import com.itstyle.modules.alipay.util.AliPayConfig;
  * 创建时间	2018年1月15日
  */
 @Service
-@Component
+@Component("aliPayService")
 public class AliPayServiceImpl implements IAliPayService {
 	private static final Logger logger = LoggerFactory.getLogger(AliPayServiceImpl.class);
 	
@@ -311,5 +313,27 @@ public class AliPayServiceImpl implements IAliPayService {
 			e.printStackTrace();
 		}
 		return orderString ;
+	}
+	@Override
+	public boolean rsaCheckV1(Map<String, String> params) {
+		//验证签名 校验签名
+		boolean signVerified = false;
+	    try {
+			signVerified = AlipaySignature.rsaCheckV1(params, Configs.getAlipayPublicKey(), "UTF-8");
+		} catch (AlipayApiException e) {
+			e.printStackTrace();
+		}
+		return signVerified;
+	}
+	@Override
+	public boolean rsaCheckV2(Map<String, String> params) {
+		//验证签名 校验签名
+		boolean signVerified = false;
+	    try {
+			signVerified = AlipaySignature.rsaCheckV2(params, Configs.getAlipayPublicKey(), "UTF-8");
+		} catch (AlipayApiException e) {
+			e.printStackTrace();
+		}
+		return signVerified;
 	}
 }

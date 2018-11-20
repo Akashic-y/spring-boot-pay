@@ -6,6 +6,7 @@ import io.swagger.annotations.ApiOperation;
 import java.io.BufferedOutputStream;
 import java.util.Enumeration;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -82,7 +83,7 @@ public class AliPayController {
 		return "alipay/pay";
     }
     /**
-     * 支付宝支付回调(二维码、H5、网站)
+     * 支付宝支付后台回调(二维码、H5、网站)
      * @Author  科帮网
      * @param request
      * @param response
@@ -143,5 +144,49 @@ public class AliPayController {
 		out.write(message.getBytes());
 		out.flush();
 		out.close();
+	}
+	
+	/**
+	 * 支付宝支付PC端前台回调
+	 * @Author  科帮网
+	 * @param request
+	 * @return  String
+	 * @Date	2018年11月20日
+	 * 更新日志
+	 * 2018年11月20日  科帮网 首次创建
+	 */
+	@RequestMapping("/frontRcvResponse")
+	public String  frontRcvResponse(HttpServletRequest request){
+		try {
+			//获取支付宝GET过来反馈信息
+			Map<String,String> params = new HashMap<String,String>();
+			Map<String,String[]> requestParams = request.getParameterMap();
+			for (Iterator<String> iter = requestParams.keySet().iterator(); iter.hasNext();) {
+				String name = (String) iter.next();
+				String[] values = (String[]) requestParams.get(name);
+				String valueStr = "";
+				for (int i = 0; i < values.length; i++) {
+					valueStr = (i == values.length - 1) ? valueStr + values[i]
+							: valueStr + values[i] + ",";
+				}
+				//乱码解决，这段代码在出现乱码时使用
+				valueStr = new String(valueStr.getBytes("ISO-8859-1"), "utf-8");
+				params.put(name, valueStr);
+			}
+			//商户订单号
+			String orderNo = new String(request.getParameter("out_trade_no").getBytes("ISO-8859-1"),"UTF-8");
+			//前台回调验证签名 v1 or v2
+			boolean signVerified = aliPayService.rsaCheckV1(params);
+			if(signVerified) {
+				logger.info("订单号"+orderNo+"验证签名结果[成功].");
+				//处理业务逻辑
+			}else {
+				logger.info("订单号"+orderNo+"验证签名结果[失败].");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		//支付成功、跳转到成功页面
+		return "success.html";
 	}
 }
