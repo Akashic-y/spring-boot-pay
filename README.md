@@ -230,9 +230,15 @@ AlipayClient alipayClient = new DefaultAlipayClient(
                                                Configs.getAlipayPublicKey(),"RSA2");
 ```
 
+## 推荐算法
 
+[第一篇、MD5算法和SHA-1算法](https://www.jianshu.com/p/38c93c677124)
 
+[第二篇：对称加密及AES加密算法](https://www.jianshu.com/p/3840b344b27c)
 
+[第三篇：从支付宝SDK的支付流程理解什么是公钥和私钥，什么是加密和数字签名](https://www.jianshu.com/p/6f5f0695d8fa)
+
+[第四篇：非对称加密及RSA加密算法](https://www.jianshu.com/p/9785bd492a6e)
 
 ## 推荐阅读
 
