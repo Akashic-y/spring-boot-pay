@@ -27,7 +27,7 @@ JDK1.7、Maven、Eclipse、SpringBoot1.5.2、spring-boot-starter-thymeleaf、Dub
 
 ## 启动说明
 - 项目中RPC框架使用的是当当维护的DubboX，现在阿里已经处于维护状态中，请自行更新
-- 配置Dubbo需要安装注册中心zookeeper: http://www.52itstyle.com/thread-19791-1-1.html
+- 配置Dubbo需要安装注册中心zookeeper: http://www.52itstyle.top/thread-19791-1-1.html
 - 如果不想使用Dubbo和安装zookeeper，又想启动看下效果，请注释掉 Application 类中的@ImportResource({"classpath:spring-context-dubbo.xml"})，
 同时由于接口扫描注解使用的是Dubbo的  com.alibaba.dubbo.config.annotation.Service; 请自行替换成spring的 org.springframework.stereotype.Service;
 
@@ -48,7 +48,7 @@ JDK1.7、Maven、Eclipse、SpringBoot1.5.2、spring-boot-starter-thymeleaf、Dub
 
 地址：http://localhost:8080/springboot_pay/swagger-ui.html
 
-配置说明：https://blog.52itstyle.com/archives/1473/
+配置说明：https://blog.52itstyle.vip/archives/1473/
 
 ![支付文档](https://git.oschina.net/uploads/images/2017/0828/172331_6537f916_87650.png "zhifuAPI.png")
 
@@ -141,7 +141,7 @@ CERT_PATH = apiclient_cert.p12
 ## 银联
 - 开放平台：https://open.unionpay.com/
 - 商家中心：https://merchant.unionpay.com/join/
-- 测试账号：https://blog.52itstyle.com/archives/326/
+- 测试账号：https://blog.52itstyle.vip/archives/326/
 - 证书问题(QA)：https://open.unionpay.com/ajweb/help/faq/list?id=174&level=0&from=0
 
 ## 注意事项
@@ -240,36 +240,36 @@ AlipayClient alipayClient = new DefaultAlipayClient(
 ## 推荐阅读
 
 
-[开发银联支付之前要做的那些事儿](https://blog.52itstyle.com/archives/3060/)
+[开发银联支付之前要做的那些事儿](https://blog.52itstyle.vip/archives/3060/)
 
-[开发微信支付之前要做的那些事儿](https://blog.52itstyle.com/archives/3053/)
+[开发微信支付之前要做的那些事儿](https://blog.52itstyle.vip/archives/3053/)
 
-[内网穿透神器：Ngrok在支付中的正确使用姿势](https://blog.52itstyle.com/archives/2972/)
+[内网穿透神器：Ngrok在支付中的正确使用姿势](https://blog.52itstyle.vip/archives/2972/)
 
-[那些年支付宝微信银联支付遇到的坑](https://blog.52itstyle.com/archives/1364/)
+[那些年支付宝微信银联支付遇到的坑](https://blog.52itstyle.vip/archives/1364/)
 
-[微信扫码支付模式以及使用场景 ](http://https://blog.52itstyle.com/archives/1367/)
+[微信扫码支付模式以及使用场景 ](http://https://blog.52itstyle.vip/archives/1367/)
 
-[JAVAWEB如何集成银联网关支付(模拟环境测试)](https://blog.52itstyle.com/archives/331/)
+[JAVAWEB如何集成银联网关支付(模拟环境测试)](https://blog.52itstyle.vip/archives/331/)
 
-[2017年最新javaweb整合银联在线支付DEMO](https://blog.52itstyle.com/archives/326/)
+[2017年最新javaweb整合银联在线支付DEMO](https://blog.52itstyle.vip/archives/326/)
 
-[微信支付linux下java.net.UnknownHostException: api.mch.weixin.qq.com](https://blog.52itstyle.com/archives/162/)
+[微信支付linux下java.net.UnknownHostException: api.mch.weixin.qq.com](https://blog.52itstyle.vip/archives/162/)
 
-[JAVA实现微信退款报错unexpected end of file from server](https://blog.52itstyle.com/archives/159/)
+[JAVA实现微信退款报错unexpected end of file from server](https://blog.52itstyle.vip/archives/159/)
 
-[支付宝扫码支付和微信扫码支付业务场景及问题记录](https://blog.52itstyle.com/archives/263/)
+[支付宝扫码支付和微信扫码支付业务场景及问题记录](https://blog.52itstyle.vip/archives/263/)
 
-[微信扫码支付(模式一)遇到的那些坑](https://blog.52itstyle.com/archives/1372/)
+[微信扫码支付(模式一)遇到的那些坑](https://blog.52itstyle.vip/archives/1372/)
 
-[微信公众号H5支付遇到的那些坑 ](https://blog.52itstyle.com/archives/1440/) 
+[微信公众号H5支付遇到的那些坑 ](https://blog.52itstyle.vip/archives/1440/) 
 
-[阿里云HTTPS证书服务](https://blog.52itstyle.com/archives/969/)
+[阿里云HTTPS证书服务](https://blog.52itstyle.vip/archives/969/)
 
-[SpringBoot开发案例之整合Swagger篇](https://blog.52itstyle.com/archives/1473/)
+[SpringBoot开发案例之整合Swagger篇](https://blog.52itstyle.vip/archives/1473/)
 
-[SpringBoot开发案例之整合Dubbo分布式服务](https://blog.52itstyle.com/archives/3411/)
+[SpringBoot开发案例之整合Dubbo分布式服务](https://blog.52itstyle.vip/archives/3411/)
 
 作者： 小柒2012
 
-欢迎关注： https://blog.52itstyle.com
+欢迎关注： https://blog.52itstyle.vip
