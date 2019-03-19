@@ -199,7 +199,7 @@ CERT_PATH = apiclient_cert.p12
 
 - [支付宝支付密钥RSA1升级到RSA2](http://https://blog.52itstyle.com/archives/3453/)
 
-- 微信支付SDK漏洞xxe漏洞修复。
+- [微信支付SDK漏洞xxe漏洞修复。](https://gitee.com/52itstyle/spring-boot-pay/blob/master/src/main/java/com/itstyle/modules/weixinpay/util/XMLUtil.java)
 
 #### 2018-11-19 更新说明：
 
