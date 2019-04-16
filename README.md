@@ -1,5 +1,17 @@
-## spring-boot-pay
+# spring-boot-pay
 支付服务：支付宝，微信，银联详细 **代码案例** (除银联支付可以测试以外，支付宝和微信支付测试均需要企业认证，个人无法完成测试)，项目启动前请仔细阅读  **[注意事项](https://git.oschina.net/52itstyle/spring-boot-pay#注意事项)** :fa-hand-o-left:   。
+
+## 推荐
+
+秒杀案例：https://gitee.com/52itstyle/spring-boot-seckill
+
+任务调度：https://gitee.com/52itstyle/spring-boot-quartz
+
+邮件服务：https://gitee.com/52itstyle/spring-boot-mail
+
+搜索服务：https://gitee.com/52itstyle/spring-boot-elasticsearch
+
+私人网盘：https://gitee.com/52itstyle/spring-boot-CloudDisk
 
 
 ## 欢迎关注
