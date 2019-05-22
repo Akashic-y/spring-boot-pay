@@ -1,17 +1,21 @@
 # spring-boot-pay
 支付服务：支付宝，微信，银联详细 **代码案例** (除银联支付可以测试以外，支付宝和微信支付测试均需要企业认证，个人无法完成测试)，项目启动前请仔细阅读  **[注意事项](https://git.oschina.net/52itstyle/spring-boot-pay#注意事项)** :fa-hand-o-left:   。
 
-## 推荐
 
-秒杀案例：https://gitee.com/52itstyle/spring-boot-seckill
+## 你问我答
 
-任务调度：https://gitee.com/52itstyle/spring-boot-quartz
+1）为什么会有这个一个项目？
+因为平台有多个项目，每个项目都有支付模块，所以就单独出来了一个服务，这样就可以复用呗。
+2）服务通过什么方式调用？
+当然是 RPC 了，通过注册中心调用服务，技术栈 Zookeeper + Dubbo，这两个玩意都可以做集群。
+3）使用 RPC 有什么好处？
+一是安全啊，我们项目部署在私有云，注册中心一般不会对外开放，那就不存在 HTTP 接口所谓的鉴权了；
+二是高效啊，毕竟 RPC 是基于四层协议的，相对来说的确会高那么一点点，这个大家可以自行测试，但是我觉得对于大部门公司，这个不重要。
+4）这个项目可以拿来即用吗？
+当然可以，只要只配置好相关参数，把接口类打个包，扔给消费者就是了，当然了，一些业务逻辑还是需要自己去实现的。
+5）如何保证高可用？
+那就部署多个服务，Dubbo 默认负载均衡策略是轮询，你也可以配置成其他策略，比如根据机器配置设置加权之类的。Zookeeper 也可以啊，保证 2N+1 台就是了。
 
-邮件服务：https://gitee.com/52itstyle/spring-boot-mail
-
-搜索服务：https://gitee.com/52itstyle/spring-boot-elasticsearch
-
-私人网盘：https://gitee.com/52itstyle/spring-boot-CloudDisk
 
 
 ## 欢迎关注
@@ -281,6 +285,21 @@ AlipayClient alipayClient = new DefaultAlipayClient(
 [SpringBoot开发案例之整合Swagger篇](https://blog.52itstyle.vip/archives/1473/)
 
 [SpringBoot开发案例之整合Dubbo分布式服务](https://blog.52itstyle.vip/archives/3411/)
+
+
+
+## 推荐
+
+秒杀案例：https://gitee.com/52itstyle/spring-boot-seckill
+
+任务调度：https://gitee.com/52itstyle/spring-boot-quartz
+
+邮件服务：https://gitee.com/52itstyle/spring-boot-mail
+
+搜索服务：https://gitee.com/52itstyle/spring-boot-elasticsearch
+
+私人网盘：https://gitee.com/52itstyle/spring-boot-CloudDisk
+
 
 作者： 小柒2012
 
