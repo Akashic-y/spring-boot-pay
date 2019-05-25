@@ -47,11 +47,7 @@ public class WeixinPayController {
 	@Value("${wexinpay.notify.url}")
 	private String notify_url;
 	
-	@ApiOperation(value="支付主页")
-	@RequestMapping(value="index",method=RequestMethod.GET)
-    public String   index() {
-        return "weixinpay/index";
-    }
+
 	@ApiOperation(value="二维码支付(模式一)根据商品ID预先生成二维码")
 	@RequestMapping(value="qcPay1",method=RequestMethod.POST)
     public String  qcPay1(Product product,ModelMap map) {

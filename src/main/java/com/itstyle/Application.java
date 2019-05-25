@@ -26,13 +26,13 @@ import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
 @EnableDubboConfiguration
 @SpringBootApplication
 //@ImportResource({"classpath:spring-context-dubbo.xml"})
-@Controller
 public class Application extends WebMvcConfigurerAdapter {
 	private static final Logger logger = Logger.getLogger(Application.class);
 
-	@RequestMapping("/")
-	public String greeting() {
-		return "index";
+	public static void main(String[] args) throws InterruptedException,
+			IOException {
+		SpringApplication.run(Application.class, args);
+		logger.info("支付项目启动 ");
 	}
 
 	@Override
@@ -43,10 +43,5 @@ public class Application extends WebMvcConfigurerAdapter {
 		logger.info("自定义静态资源目录,这只是个Demo,生产肯定不会暴露");
 	}
 
-	public static void main(String[] args) throws InterruptedException,
-			IOException {
-		SpringApplication.run(Application.class, args);
-		logger.info("支付项目启动 ");
-	}
 
 }

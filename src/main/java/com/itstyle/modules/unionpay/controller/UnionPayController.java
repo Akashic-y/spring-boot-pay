@@ -40,12 +40,7 @@ public class UnionPayController {
 	@Autowired
 	private IUnionPayService unionPayService;
 
-
-	@ApiOperation(value="银联支付主页")
-	@RequestMapping(value="index",method=RequestMethod.GET)
-    public String   index() {
-        return "unionpay/index";
-    }
+	
 	@ApiOperation(value="电脑支付")
 	@RequestMapping(value="pcPay",method=RequestMethod.POST)
     public String  pcPay(Product product,ModelMap map) {

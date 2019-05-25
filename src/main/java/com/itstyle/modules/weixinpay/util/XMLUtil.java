@@ -119,7 +119,7 @@ public class XMLUtil {
 	 */
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static Map doXMLParse2(String strXML) throws Exception {
-	   Map m = new HashMap<>();
+	   Map<String,String> m = new HashMap<String,String>();
 	   DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 	   String FEATURE = null;
 	   try {

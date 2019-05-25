@@ -21,12 +21,7 @@ import com.itstyle.common.utils.DateUtil;
 public class PayController {
 	private static final Logger logger = LoggerFactory.getLogger(PayController.class);
 
-	@ApiOperation(value="登陆首页")
-	@RequestMapping(value="index",method=RequestMethod.GET)
-    public String   index() {
-		logger.info("登陆首页");
-        return "web/index";
-    }
+
 	@ApiOperation(value="登陆")
 	@RequestMapping(value="login",method=RequestMethod.POST)
 	public @ResponseBody String login(HttpServletRequest request, HttpServletResponse response,

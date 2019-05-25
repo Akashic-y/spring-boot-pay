@@ -8,6 +8,7 @@
 /target/
 /log/
 /.settings/
+/.idea/
 *.project
 *.classpath
-*apiclient_cert.p12
+spring-boot-pay.iml

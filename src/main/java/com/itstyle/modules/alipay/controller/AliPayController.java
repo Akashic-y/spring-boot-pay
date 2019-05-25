@@ -40,11 +40,7 @@ public class AliPayController {
 	@Autowired
 	private IAliPayService aliPayService;
 	
-	@ApiOperation(value="支付主页")
-	@RequestMapping(value="index",method=RequestMethod.GET)
-    public String   index() {
-        return "alipay/index";
-    }
+
 	@ApiOperation(value="电脑支付")
 	@RequestMapping(value="pcPay",method=RequestMethod.POST)
     public String  pcPay(Product product,ModelMap map) {

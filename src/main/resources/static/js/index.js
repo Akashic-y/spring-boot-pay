@@ -24,7 +24,7 @@
         var index = layer.load(1);
         setTimeout(function () {
         	 $.ajax({
-           	    url:'login',
+           	    url:'../pay/login',
             	async:false,
             	type:'post',
             	dateType:'json',
@@ -37,7 +37,7 @@
 		                layer.msg('登陆成功，正在跳转......', { icon: 6 });
 		                layer.closeAll('page');
 		                setTimeout(function () {
-		                    location.href = "main";
+		                    location.href = "main.shtml";
 		                }, 1000);
 		            }
           		}
