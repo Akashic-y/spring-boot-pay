@@ -10,3 +10,10 @@ wget http://mirrors.hust.edu.cn/apache/zookeeper/zookeeper-3.5.3-beta/zookeeper-
 ```
 tar -xvf zookeeper-3.5.3-beta.tar.gz 
 ```
+
+这里提供一个免费的注册中心：
+
+
+```
+106.13.122.117:2181
+```
