@@ -48,9 +48,10 @@
 
 ## 开发环境
 
-JDK1.7、Maven、Eclipse、SpringBoot1.5.2、spring-boot-starter-thymeleaf、Dubbox2.8.4、zookeeper3.4.6
+JDK1.8、Maven、Eclipse、SpringBoot1.5.10、spring-boot-starter-thymeleaf、Dubbo2.6.2、zookeeper3.5.3
 
 ## 启动说明
+
 - 项目中RPC框架使用的是当当维护的DubboX，现在阿里已经处于维护状态中，请自行更新
 - 配置Dubbo需要安装注册中心zookeeper: http://www.52itstyle.top/thread-19791-1-1.html
 - 如果不想使用Dubbo和安装zookeeper，又想启动看下效果，请注释掉 Application 类中的@ImportResource({"classpath:spring-context-dubbo.xml"})，
