@@ -38,7 +38,7 @@ import com.itstyle.modules.weixinpay.util.XMLUtil;
  */
 @Api(tags ="微信支付")
 @Controller
-@RequestMapping(value = "weixin")
+@RequestMapping(value = "weixinpay")
 public class WeixinPayController {
 	private static final Logger logger = LoggerFactory.getLogger(WeixinPayController.class);
 	@Autowired
