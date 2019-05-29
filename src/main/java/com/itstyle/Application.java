@@ -4,6 +4,7 @@ import java.io.IOException;
 import org.apache.log4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -15,7 +16,7 @@ import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
  * 创建者 科帮网
  * 创建时间 2017年7月27日
  * 启动   java -jar spring-boot-pay.jar --server.port=8886 
- * linux 下 后台启动  nohup java -jar spring-boot-pay.jar --server.port=8886 & 
+ * linux 下 后台启动  nohup java -jar spring-boot-pay.jar --server.port=8886
  * 
  * 2018-10-10 更新说明：
  * 1）原当当 Dubbox 2.8.4 替换为 Dubbo 2.6.2
@@ -23,7 +24,7 @@ import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
  * 3）原 zkclient 0.6 替换为 curator-recipes 4.0.1
  * 4）原 zookeeper 3.4.6 升级为 zookeeper 3.5.3
  */
-@EnableDubboConfiguration
+//@EnableDubboConfiguration
 @SpringBootApplication
 //@ImportResource({"classpath:spring-context-dubbo.xml"})
 public class Application extends WebMvcConfigurerAdapter {

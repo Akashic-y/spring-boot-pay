@@ -9,8 +9,6 @@ import com.alipay.demo.trade.config.Configs;
 import com.itstyle.modules.alipay.util.AliPayConfig;
 /**
  * 测试APP服务端逻辑
- * 创建者 科帮网
- * 创建时间	2017年9月21日
  *
  */
 public class AppAliPay{

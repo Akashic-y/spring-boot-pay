@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import com.alibaba.dubbo.config.annotation.Service;
+import org.springframework.stereotype.Service;
 import com.itstyle.common.constants.Constants;
 import com.itstyle.common.constants.PayWay;
 import com.itstyle.common.model.Product;

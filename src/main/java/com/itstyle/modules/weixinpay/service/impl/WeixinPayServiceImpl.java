@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 
 import weixin.popular.api.SnsAPI;
 
-import com.alibaba.dubbo.config.annotation.Service;
+import org.springframework.stereotype.Service;
 import com.alipay.demo.trade.utils.ZxingUtils;
 import com.itstyle.common.constants.Constants;
 import com.itstyle.common.model.Product;
